@@ -1,0 +1,65 @@
+<!-- display_messages.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        a{
+
+        margin-left: 20pt;
+        padding: 5pt;
+        text-decoration: none;
+        color:red;
+        }
+        a:hover{
+            color:red;
+            background-color: green;
+        }
+        .ab{
+            margin-left: 20pt;
+        }
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display vacancy</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function fetchvacancy() {
+            $.ajax({
+                url: 'applicationfetch.php', // PHP script to fetch messages
+                method: 'GET',
+                success: function(data) {
+                    $('#vacancy').html(data); // Update the messages div with the fetched data
+                }
+            });
+        }
+
+        // Fetch messages every 5 seconds
+        setInterval(fetchvacancy, 5000);
+
+        // Fetch messages on page load
+        $(document).ready(function() {
+            fetchvacancy();
+        });
+    </script>
+</head>
+<body>
+<h1 style="background-color:green; color: black;">WELCOME TO APPLICATION PAGE PAGE </h1> 
+
+<div class="ab">
+
+    <h1>Uploaded File!</h1>
+    <div id="vacancy">
+        
+        <!-- Messages will be displayed here -->
+         
+    </div>
+</div>
+<div class="lin">
+
+</p>
+<a href="hr manager.html">BACK</a>
+<a href="uploadlist.php"> DOWNLOAD</a>
+</div>
+</body>
+</html>

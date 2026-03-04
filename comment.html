@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Page</title>
+    <link rel="icon" href="mau image.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+           a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #4CAF50; /* Green */
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 2px solid #4CAF50; /* Green border */
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover {
+            background-color: #4CAF50; /* Green */
+            color: white; /* White text on hover */
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .all {
+            margin-bottom: 20px; /* Space between image and form */
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: blue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
+        }
+        .all {
+            margin-top: -14pt;
+            margin-left: -14pt;
+            margin-right: -14pt;
+        }
+        .ah {
+            margin-left: 300pt;
+        }
+    </style>
+</head>
+<body class="alladmin">
+        
+    <div class="all">
+        <h3 class="ah">Welcome to employee page</h3>
+        <img src="hrm.png" width="1350pt" height="110pt" style="margin-bottom: 20px;"> <!-- Added margin-bottom for spacing -->
+    </div>
+
+    <div class="form-container">
+        <form action="comment.php" method="POST">
+            <h2>Welcome to Comment Page</h2>
+            <p>Give any comment</p>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" placeholder="Please enter your name" required>
+            
+            <label for="id">Your ID:</label>
+            <input type="text" name="id" placeholder="Please enter your ID" required>
+            
+            <label for="comment">Your Comment:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..." required></textarea>
+            
+            <div>
+                <input type="submit" name="submit" value="Send">
+            </div>
+        </form>
+        <a href="employee.html" class="back-link">Back</a>
+    </div>
+</body>
+</html>

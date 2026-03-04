@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Account</title>
+    <link rel="icon" href="mau image.ico" type="image/x-icon"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px; /* Set a maximum width for the form */
+            margin: 0 auto; /* Center the form */
+            background-color: white; /* White background for the form */
+            padding: 20px; /* Padding inside the form */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        h2 {
+            text-align: center;
+            color: #343a40; /* Dark color for the heading */
+        }
+        label {
+            display: block; /* Make labels block elements */
+            margin: 10px 0 5px; /* Spacing around labels */
+            color: #555; /* Slightly lighter color for labels */
+        }
+        input[type="text"] {
+            width: 100%; /* Full width for input fields */
+            padding: 10px; /* Padding inside input fields */
+            border: 1px solid #007BFF; /* Border color */
+            border-radius: 4px; /* Rounded corners for input fields */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .button-container {
+            display: flex; /* Use flexbox for button alignment */
+            justify-content: space-between; /* Space between buttons */
+            margin-top: 15px; /* Spacing above the button container */
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #007BFF; /* Blue background for buttons */
+            color: white; /* White text for buttons */
+            border: none; /* No border */
+            padding: 10px; /* Padding inside buttons */
+            border-radius: 4px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+            width: 48%; /* Width for buttons */
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .ww {
+            text-align: center; /* Center the back link */
+            margin-top: 20px; /* Spacing above the back link */
+        }
+        a {
+            text-decoration: none;
+            color: brown; /* Color for the back link */
+        }
+        a:hover {
+            color: red; /* Color on hover */
+            background-color: green; /* Background on hover */
+            padding: 5px; /* Padding on hover */
+            border-radius: 4px; /* Rounded corners on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="updateaccount.php" method="POST">
+        <h2><b>Update User Account</b></h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" maxlength="16" required>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" maxlength="8" required>
+
+        <div class="button-container">
+            <input type="submit" name="submit" value="Update">
+            <input type="reset" name="cancel" value="Cancel">
+        </div>
+    </form>
+</div>
+
+<div class="ww"> 
+    <a href="admin.html"><b>Back</b></a>
+</div>
+
+</body>
+</html>

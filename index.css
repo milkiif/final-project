@@ -1,0 +1,199 @@
+a{
+    text-decoration: none;
+    padding: 20pt;
+    background-color: white;
+    text-align: center;
+  
+
+
+}
+a:hover{
+background-color: darkslategray;
+
+}
+.allbody{
+    background-color: green;
+    backface-visibility: visible;
+}
+.h1{
+    bottom: 30pt;
+    background-position: 0ric;
+}
+.link{
+    margin-right: 100pt;
+    margin-top: -31pt;
+    margin-left: 100pt;
+}
+.h4{
+    margin-top: 70pt;
+}
+.form{
+     margin-left: 400pt;
+     margin-top: 30pt;
+}
+.nn{
+    background-color: green;
+    
+}
+.nav-item{
+color:red;
+text-shadow: 30pt;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: black; 
+}
+
+.dropdown-menu .dropdown-item {
+    color: white; 
+}
+
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: green; 
+    color: white; 
+}
+
+.navbar {
+    background-color: green; 
+}
+
+.navbar-brand {
+    color: white; 
+    background-color: green;
+}
+
+.navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: lightgray; 
+}
+
+
+/* layout for background page */
+.img{
+    margin-left: 25pt;
+}
+.h{
+    margin-left: 10pt;
+}
+.alll{
+    background-color: white;
+}
+
+
+/* mission and vision */
+.mision{
+    background-color: white;
+    
+}
+.h1{
+    color:green;
+    margin-left: 10pt;
+}
+.paragraph{
+    margin-left: 20pt;
+    margin-right: 10pt;
+}
+/* form of login*/
+
+.form{
+    margin-top: 5pt;
+    margin-right: -100pt;
+    margin-left: 300pt;
+
+}
+
+
+
+/*  for Admin */
+
+.admin{
+    background-color: green;
+}
+a{
+    text-decoration: none;
+    padding: 25pt;
+    color: white;
+}
+a:hover{
+    background-color: brown;
+}
+.aa{
+    margin-top: -10pt;
+    margin-left: 80pt;
+}
+.ah{
+    
+    margin-left: 100pt;
+    color: white;
+}
+.all{
+    background-color: green;
+}
+.nav-item{
+    color:red;
+}
+.alladmin{
+    background-color: lightslategray;
+}
+/*  fffooooormmm */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 10pt;
+    margin-left: 300pt;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.error {
+    color: red;
+}
+/*for hr manager*/ 
+.ah{
+    margin-left:300pt;
+}
+
+

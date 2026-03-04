@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100px; /* Minimized width */
+            align-self: flex-start; /* Align buttons to the start */
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        #vacancy {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e7f3fe;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Vacancy</title>
+    <link rel="icon" href="mau image.ico" type="image/x-icon"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function fetchvacancy() {
+            $.ajax({
+                url: 'postvacncyfetch.php', // PHP script to fetch messages
+                method: 'GET',
+                success: function(data) {
+                    $('#vacancy').html(data); // Update the messages div with the fetched data
+                }
+            });
+        }
+
+        // Fetch messages every 5 seconds
+        setInterval(fetchvacancy, 5000);
+
+        // Fetch messages on page load
+        $(document).ready(function() {
+            fetchvacancy();
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>WELCOME TO POST VACANCIES PAGE!!</h1>
+    <form action="postvacancy.php" method="POST">
+        <label for="id">Job ID:</label>
+        <input type="text" name="id" placeholder="Please enter the ID of your job!" required>
+
+        <label for="title">Job Title:</label>
+        <input type="text" name="title" placeholder="Please enter the title of your job!" required>
+
+        <label for="dep">Department:</label>
+        <input type="text" name="dep" placeholder="Please enter department!" required>
+
+        <label for="desc">Job Description:</label>
+        <textarea name="desc" rows="5" placeholder="Please enter job description..."></textarea>
+
+        <input type="submit" name="submit" value="POST">
+        <input type="reset" name="cancel" value="CANCEL">
+    </form>
+
+    <h1>Available Vacancies</h1>
+    <div id="vacancy">
+        <!-- Messages will be displayed here -->
+    </div>
+
+    <a href="hr manager.html">BACK</a>
+</div>
+</body>
+</html>
